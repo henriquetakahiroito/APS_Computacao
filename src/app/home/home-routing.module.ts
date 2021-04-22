@@ -8,6 +8,10 @@ const routes: Routes = [
     component: HomePage,
     children:[
       {
+        path: 'inicio',
+        loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+      },
+      {
         path: 'cartao',
         loadChildren: () => import('./cartao/cartao.module').then( m => m.CartaoPageModule)
       },
