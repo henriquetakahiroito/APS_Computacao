@@ -1,12 +1,29 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Simulacao</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
   </ion-toolbar>
+
+
+
+
 </ion-header>
 
 <ion-content>
+
+  <ion-input name="newValor" type="text" placeholder="Quantidades"></ion-input>
+
+  <ion-row>
+  <ion-label>Qual mês?: </ion-label>
+  <ion-input name="newTempo" type="number" placeholder="Quantos meses?"></ion-input> 
+  </ion-row>  
+
+  <ion-row>  
+    <ion-input name="newInvestName" type="text" placeholder="Nome Investimento"></ion-input>
+    <ion-input name="newPercentYear" type="number" placeholder="% ao ano"></ion-input>
+    <ion-button>
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-button>
+  </ion-row>
   <ion-text>Aqui é o Simulacao</ion-text>
+
 </ion-content>
