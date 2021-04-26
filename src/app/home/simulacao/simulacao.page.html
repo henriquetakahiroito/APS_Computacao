@@ -6,11 +6,17 @@
 
 <ion-content>
   <ion-text>Aqui é o Simulacao</ion-text>
-  <ion-input name="newValor" type="text" placeholder="Quantidades"></ion-input>
 
-  <ion-row>
-    <ion-label>Qual mês?: </ion-label>
-    <ion-input name="newTempo" type="number" placeholder="Quantos meses?"></ion-input>
+  <br />
+  <br />
+    <ion-row>
+    <ion-label>Qual o valor? </ion-label>
+  <ion-input [(ngModel)]="newValor" name="newValor" type="number" placeholder="Quantidades"></ion-input>
+  </ion-row>
+
+    <ion-row>
+    <ion-label>Quantos meses? </ion-label>
+    <ion-input [(ngModel)]="newTempo" name="newTempo" type="number" placeholder="Quantos meses?"></ion-input>
   </ion-row>
 
   <br />
@@ -23,22 +29,27 @@
   </form>
 
   <ion-button  (click)="addNewSimulacao()">
-    <ion-icon slot="icon-only" name="add">Adcionar</ion-icon>
+    <ion-icon slot="icon-only" name="add"></ion-icon>Adcionar
   </ion-button>
 
   <ion-list *ngIf="simulacoes.length > 0; else empty">
     <ion-item *ngFor="let simulacao of simulacoes">
+      
       <ion-label>{{simulacao.nome}}</ion-label>
       <ion-label>{{simulacao.percentual}}</ion-label>
       <ion-button slot="end" fill="clear" color="danger" (click)="removeSimulacao(simulacao)">
         <ion-icon slot="icon-only" name="trash"></ion-icon>
       </ion-button>
+
     </ion-item>
   </ion-list>
 
-    <ng-template #empty>
-    <ion-text color="medium" class="ion-text-center">
+  <ion-button  (click)="Simulacao()">
+    <ion-icon slot="icon-only" name="add"></ion-icon>Simular
+  </ion-button>
 
+  <ng-template #empty>
+    <ion-text color="medium" class="ion-text-center">
       <p class="ion-no-margin">Não há Investimentos para simular</p>
     </ion-text>
   </ng-template>
