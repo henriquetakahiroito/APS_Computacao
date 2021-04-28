@@ -13,7 +13,18 @@ interface Simulacao{
 
 export class SimulacaoPage{
 
-  public simulacoes : Simulacao[] = [];
+  public simulacoes : Simulacao[] = [
+  {
+    nome: "IPCA",
+    percentual: 0.1
+  },{
+    nome: "Nubank",
+    percentual: 0.5
+  },{
+    nome: "SELIC",
+    percentual: 0.01
+  },
+];
 
   public newValor = 0.0;
   public newTempo = 0.0;
